@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>개발자명 | Apps</title>
+  <meta name="description" content="GolfNavi, GList 앱을 만드는 개발자 페이지입니다.">
+  <style>
+    :root {
+      --bg: #f6f7f4;
+      --card: #ffffff;
+      --text: #1d2420;
+      --sub: #5f6b64;
+      --line: #e3e7e1;
+      --golf: #2f8a4e;
+      --golf-soft: #e4f3e8;
+      --list: #e07a2f;
+      --list-soft: #fcefe3;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #121614;
+        --card: #1b201d;
+        --text: #eef2ef;
+        --sub: #a3aea7;
+        --line: #2b322e;
+        --golf: #5cc27e;
+        --golf-soft: #1f3327;
+        --list: #f29a55;
+        --list-soft: #3a2a1d;
+      }
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif;
+      line-height: 1.6;
+    }
+    .wrap { max-width: 880px; margin: 0 auto; padding: 0 16px; }
+
+    header { padding: 64px 0 40px; }
+    header h1 { font-size: 2rem; letter-spacing: -0.02em; }
+    header p { color: var(--sub); margin-top: 8px; }
+
+    .apps { display: grid; gap: 20px; grid-template-columns: 1fr; padding-bottom: 48px; }
+    @media (min-width: 720px) { .apps { grid-template-columns: 1fr 1fr; } }
+
+    .app {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      padding: 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .app-head { display: flex; align-items: center; gap: 16px; }
+    .icon {
+      width: 64px; height: 64px; border-radius: 16px;
+      display: grid; place-items: center;
+      font-size: 32px; flex-shrink: 0;
+    }
+    .icon img { width: 100%; height: 100%; border-radius: 16px; object-fit: cover; }
+    .golf .icon { background: var(--golf-soft); }
+    .list .icon { background: var(--list-soft); }
+    .app h2 { font-size: 1.35rem; }
+    .tag { font-size: 0.85rem; font-weight: 600; }
+    .golf .tag { color: var(--golf); }
+    .list .tag { color: var(--list); }
+    .app > p { color: var(--sub); }
+
+    .features { list-style: none; display: grid; gap: 6px; font-size: 0.95rem; }
+    .features li::before { content: "✓ "; font-weight: 700; }
+    .golf .features li::before { color: var(--golf); }
+    .list .features li::before { color: var(--list); }
+
+    .links { display: flex; flex-wrap: wrap; gap: 8px; margin-top: auto; padding-top: 8px; }
+    .btn {
+      display: inline-block; padding: 10px 16px; border-radius: 999px;
+      font-size: 0.9rem; font-weight: 600; text-decoration: none;
+      border: 1px solid var(--line); color: var(--text);
+    }
+    .golf .btn.primary { background: var(--golf); border-color: var(--golf); color: #fff; }
+    .list .btn.primary { background: var(--list); border-color: var(--list); color: #fff; }
+    .btn:hover { opacity: 0.85; }
+
+    footer {
+      border-top: 1px solid var(--line);
+      padding: 28px 0 48px;
+      color: var(--sub); font-size: 0.9rem;
+    }
+    footer a { color: inherit; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <h1>개발자명</h1>
+      <p>일상을 조금 더 편하게 만드는 앱을 만듭니다.</p>
+    </header>
+
+    <main class="apps">
+      <!-- GolfNavi -->
+      <section class="app golf">
+        <div class="app-head">
+          <!-- 아이콘 이미지가 있으면 아래 ⛳ 대신 <img src="golfnavi/icon.png" alt="GolfNavi 아이콘"> -->
+          <div class="icon">⛳</div>
+          <div>
+            <h2>GolfNavi</h2>
+            <span class="tag">골프</span>
+          </div>
+        </div>
+        <p>라운드를 더 쉽고 즐겁게. 코스 정보부터 스코어 기록까지 골프에 필요한 기능을 한곳에 담았습니다.</p>
+        <ul class="features">
+          <li>코스 및 홀 정보 확인</li>
+          <li>스코어 기록과 라운드 기록 관리</li>
+          <li>간편하고 직관적인 화면</li>
+        </ul>
+        <div class="links">
+          <a class="btn primary" href="GOOGLE_PLAY_URL_GOLFNAVI">Google Play</a>
+          <a class="btn primary" href="APP_STORE_URL_GOLFNAVI">App Store</a>
+          <a class="btn" href="golfnavi/privacy.html">개인정보처리방침</a>
+        </div>
+      </section>
+
+      <!-- GList -->
+      <section class="app list">
+        <div class="app-head">
+          <!-- 아이콘 이미지가 있으면 아래 🛒 대신 <img src="glist/icon.png" alt="GList 아이콘"> -->
+          <div class="icon">🛒</div>
+          <div>
+            <h2>GList</h2>
+            <span class="tag">장바구니</span>
+          </div>
+        </div>
+        <p>장 볼 때 잊어버리는 물건 없이. 사야 할 것을 빠르게 적고, 체크하며 쇼핑할 수 있는 장바구니 앱입니다.</p>
+        <ul class="features">
+          <li>빠른 항목 추가와 체크</li>
+          <li>여러 개의 목록 관리</li>
+          <li>깔끔하고 가벼운 디자인</li>
+        </ul>
+        <div class="links">
+          <a class="btn primary" href="GOOGLE_PLAY_URL_GLIST">Google Play</a>
+          <a class="btn primary" href="APP_STORE_URL_GLIST">App Store</a>
+          <a class="btn" href="glist/privacy.html">개인정보처리방침</a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>문의: <a href="mailto:your@email.com">your@email.com</a></p>
+      <p>© 2026 개발자명. All rights reserved.</p>
+    </footer>
+  </div>
+</body>
+</html>
