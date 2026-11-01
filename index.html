@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>SeungWon Kim | Apps</title>
-  <meta name="description" content="GolfNavi, GList — iOS apps by SeungWon Kim.">
+  <meta name="description" content="GolfNavi, GList, Mamo Naku — iOS apps by SeungWon Kim.">
   <style>
     :root {
       --bg: #f6f7f4;
@@ -16,6 +16,8 @@
       --golf-soft: #e4f3e8;
       --list: #e07a2f;
       --list-soft: #fcefe3;
+      --train: #2f6fd0;
+      --train-soft: #e4ecfa;
     }
     @media (prefers-color-scheme: dark) {
       :root {
@@ -28,6 +30,8 @@
         --golf-soft: #1f3327;
         --list: #f29a55;
         --list-soft: #3a2a1d;
+        --train: #6fa3f2;
+        --train-soft: #1d2a3d;
       }
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -84,16 +88,19 @@
     .icon img { width: 100%; height: 100%; border-radius: 16px; object-fit: cover; }
     .golf .icon { background: var(--golf-soft); }
     .list .icon { background: var(--list-soft); }
+    .train .icon { background: var(--train-soft); }
     .app h2 { font-size: 1.35rem; }
     .tag { font-size: 0.85rem; font-weight: 600; }
     .golf .tag { color: var(--golf); }
     .list .tag { color: var(--list); }
+    .train .tag { color: var(--train); }
     .app > p { color: var(--sub); }
 
     .features { list-style: none; display: grid; gap: 6px; font-size: 0.95rem; }
     .features li::before { content: "✓ "; font-weight: 700; }
     .golf .features li::before { color: var(--golf); }
     .list .features li::before { color: var(--list); }
+    .train .features li::before { color: var(--train); }
 
     .links { display: flex; flex-wrap: wrap; gap: 8px; margin-top: auto; padding-top: 8px; }
     .btn {
@@ -103,6 +110,7 @@
     }
     .golf .btn.primary { background: var(--golf); border-color: var(--golf); color: #fff; }
     .list .btn.primary { background: var(--list); border-color: var(--list); color: #fff; }
+    .train .btn.primary { background: var(--train); border-color: var(--train); color: #fff; }
     .btn:hover { opacity: 0.85; }
 
     footer {
@@ -180,6 +188,30 @@
         <div class="links">
           <a class="btn primary" href="https://apps.apple.com/jp/app/%E8%B2%B7%E3%81%84%E7%89%A9%E3%83%AA%E3%82%B9%E3%83%88-glist/id6749603604" target="_blank" rel="noopener">App Store</a>
           <a class="btn" href="glist/privacy.html"><span class="ko">개인정보처리방침</span><span class="ja">プライバシーポリシー</span><span class="en">Privacy Policy</span></a>
+        </div>
+      </section>
+      <!-- Mamo Naku -->
+      <section class="app train">
+        <div class="app-head">
+          <div class="icon">🚃</div>
+          <div>
+            <h2>Mamo Naku</h2>
+            <span class="tag"><span class="ko">목적지 도착 알림</span><span class="ja">目的地到着お知らせ</span><span class="en">Arrival alert</span></span>
+          </div>
+        </div>
+        <p>
+          <span class="ko">전철·버스·신칸센에서 목적지에 가까워지면 알려 드립니다. 백그라운드에서도 알림이 오니 게임이나 음악을 즐기면서 내릴 역을 놓치지 마세요.</span>
+          <span class="ja">電車・バス・新幹線で目的地に近づくとお知らせ。バックグラウンドでも通知するので、ゲームや音楽を楽しみながら乗り過ごしを防げます。</span>
+          <span class="en">Get notified as you approach your destination on trains, buses, or the Shinkansen. Alerts work in the background, so you can enjoy games or music without missing your stop.</span>
+        </p>
+        <ul class="features">
+          <li><span class="ko">역·건물·주소로 목적지 검색, 등록 수 무제한</span><span class="ja">駅名・建物名・住所で目的地検索、登録数は無制限</span><span class="en">Search by station, building, or address with unlimited destinations</span></li>
+          <li><span class="ko">음성 안내, 알림 횟수·간격·거리 설정</span><span class="ja">音声ガイド、通知回数・間隔・距離の設定</span><span class="en">Voice guide and adjustable alert count, interval, and distance</span></li>
+          <li><span class="ko">이동 기록과 다크 모드</span><span class="ja">移動ログとダークモード</span><span class="en">Travel log and dark mode</span></li>
+        </ul>
+        <div class="links">
+          <a class="btn primary" href="https://apps.apple.com/jp/app/mamo-naku/id1437742743" target="_blank" rel="noopener">App Store</a>
+          <a class="btn" href="mamonaku/privacy.html"><span class="ko">개인정보처리방침</span><span class="ja">プライバシーポリシー</span><span class="en">Privacy Policy</span></a>
         </div>
       </section>
     </main>
